@@ -26,7 +26,7 @@ hanoi::hanoi(int size)
 
 void hanoi::solve(int from, int to)
 {
-    move(from, to, s[0].size());
+    hanoi::move(from, to, s[from].size());
 }
 
 void hanoi::move(int from, int to, int depth)
@@ -52,5 +52,6 @@ int main()
 {
     auto h = hanoi(3);
     h.solve(0, 2);
+    h.solve(2, 1);
 } 
 
